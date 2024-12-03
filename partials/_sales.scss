@@ -1,0 +1,16 @@
+.sales {
+	padding: 2rem 0;
+	margin-bottom: 3rem;
+	text-align: center;
+	.salespdts {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		padding: 1rem 0;
+		.pdt {
+			width: 7rem;
+			height: 10rem;
+			background-color: red;
+		}
+	}
+}

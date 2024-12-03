@@ -1,0 +1,55 @@
+.header {
+	background-color: #064c4f;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	color: white;
+	border-radius: 0.8rem;
+	flex-wrap: nowrap;
+	.right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+
+		.round {
+			--size: 2rem;
+			width: var(--size);
+			height: var(--size);
+			border: 0;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.2rem;
+		}
+		.cart-icon {
+			background-color: white;
+			color: black;
+			cursor: pointer;
+		}
+		.profile {
+			background-color: burlywood;
+		}
+	}
+	.left {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		& a {
+			text-decoration: none;
+			color: white;
+		}
+		& i {
+			color: white;
+		}
+		input {
+			width: 20rem;
+			padding: 0.5rem 1rem;
+			border: 0;
+			border-radius: 0.9rem;
+		}
+	}
+}

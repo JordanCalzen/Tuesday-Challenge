@@ -1,0 +1,24 @@
+.hero {
+	background-color: #064c4f;
+	margin-top: 1rem;
+	border-radius: 0.8rem;
+	min-height: 40vh;
+	border-bottom-left-radius: 50% 30px;
+	border-bottom-right-radius: 50% 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.content {
+		max-width: 24rem;
+		color: white;
+		padding: 1rem 2rem;
+		.btn {
+			background-color: #bbea70;
+			font-size: 1.1rem;
+			padding: 0.4em 0.6em;
+			border: 0;
+			margin-top: 1rem;
+			border-radius: 0.4rem;
+		}
+	}
+}
