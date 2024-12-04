@@ -1,0 +1,30 @@
+.sample-items {
+	width: 100%;
+	background-color: white;
+	min-height: 50vh;
+	padding: 3rem 0;
+	margin: 3rem 0;
+	border-radius: 20px;
+	.imgcontn {
+		background-color: #f4f6f6;
+		width: 50%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 2;
+		gap: 1rem;
+		border-radius: 20px;
+
+		.span {
+			grid-column: 1 / span 4;
+			grid-row: 1 / span 1;
+		}
+
+		& img {
+			object-fit: cover;
+		}
+	}
+
+	.sample-text {
+		width: 50%;
+	}
+}
