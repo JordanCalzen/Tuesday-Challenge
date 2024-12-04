@@ -75,6 +75,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: red;
 }
 .hero .content {
   max-width: 24rem;
