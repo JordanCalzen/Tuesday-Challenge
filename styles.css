@@ -5,9 +5,10 @@
 }
 
 body {
-  padding: 2rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f6f6;
+  width: 95%;
+  margin: 1rem auto;
 }
 
 .header {
@@ -19,6 +20,7 @@ body {
   color: white;
   border-radius: 0.8rem;
   flex-wrap: nowrap;
+  width: 100%;
 }
 .header .right {
   display: flex;
@@ -41,6 +43,24 @@ body {
   background-color: white;
   color: black;
   cursor: pointer;
+  position: relative;
+}
+.header .right .cart-icon span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  padding: 0.3rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top: 1px;
+  bottom: -2px;
+  text-align: center;
+  font-size: 0.5rem;
+  color: white;
 }
 .header .right .profile {
   background-color: burlywood;
@@ -59,27 +79,29 @@ body {
   color: white;
 }
 .header .left input {
-  width: 20rem;
+  width: 60%;
   padding: 0.5rem 1rem;
   border: 0;
   border-radius: 0.9rem;
 }
 
 .hero {
-  background-color: #064c4f;
+  background: url(../imgs/original-88d3b0d145123af185bebfec32b34507__1_-removebg-preview.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-top: 1rem;
   border-radius: 0.8rem;
   min-height: 40vh;
   border-bottom-left-radius: 50% 30px;
   border-bottom-right-radius: 50% 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 2rem;
+  width: 100%;
 }
 .hero .content {
   max-width: 24rem;
   color: white;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
 }
 .hero .content .btn {
   background-color: #bbea70;
@@ -91,17 +113,15 @@ body {
 }
 
 .categories {
+  width: 100%;
   padding: 2rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: 1rem;
-  flex-wrap: wrap;
 }
 .categories .product {
-  width: 8rem;
   height: 5rem;
-  background-color: rgb(247, 213, 213);
+  background-color: white;
   border-radius: 0.8rem;
   padding: 0.5rem;
   position: relative;
@@ -116,7 +136,6 @@ body {
   bottom: 0;
 }
 .categories .seeAll {
-  width: 8rem;
   height: 5rem;
   background-color: #bbea70;
   border-radius: 0.8rem;
@@ -143,16 +162,25 @@ body {
   margin-bottom: 3rem;
   text-align: center;
 }
+.sales .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sales .text a {
+  text-decoration: none;
+  color: red;
+}
 .sales .salespdts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
   padding: 1rem 0;
 }
 .sales .salespdts .pdt {
-  width: 9.5rem;
   height: 14rem;
   background-color: white;
+  border-radius: 20px;
   padding: 1rem;
 }
 

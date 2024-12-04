@@ -1,18 +1,19 @@
 .hero {
-	background-color: #064c4f;
+	background: url(../imgs/original-88d3b0d145123af185bebfec32b34507__1_-removebg-preview.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 	margin-top: 1rem;
 	border-radius: 0.8rem;
 	min-height: 40vh;
 	border-bottom-left-radius: 50% 30px;
 	border-bottom-right-radius: 50% 30px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
+	padding: 2rem;
+	width: 100%;
 	.content {
 		max-width: 24rem;
 		color: white;
-		padding: 1rem 2rem;
+		padding: 1rem 0rem;
 		.btn {
 			background-color: #bbea70;
 			font-size: 1.1rem;
