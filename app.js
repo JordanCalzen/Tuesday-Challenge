@@ -1,5 +1,15 @@
 const ourSales = document.querySelector(".salespdts");
 
+const formInput = document.querySelector("form");
+
+const inputPdtName = document.querySelector("#productName");
+
+const productImg = document.querySelector("#imageUrl");
+
+const submitPdt = document.querySelector(".submitInput");
+
+const addCategoryBtn = document.querySelector(".add-category-btn");
+
 const sales = [
 	{
 		id: 1,
@@ -67,4 +77,10 @@ sales.forEach((item) => {
     `;
 	ourSales.appendChild(product);
 	console.log(ourSales);
+});
+
+//add eventListener on the addCartegoryBtn
+
+addCategoryBtn.addEventListener("click", () => {
+	formInput.classList.toggle("visible");
 });

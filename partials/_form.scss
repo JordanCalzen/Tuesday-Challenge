@@ -1,0 +1,40 @@
+form {
+	width: 400px;
+	padding: 1.5rem 2rem;
+	background-color: rgba(190, 216, 192, 0.733);
+	backdrop-filter: blur;
+	border-radius: 20px;
+	position: absolute;
+	left: 150px;
+	top: 180px;
+	z-index: 2;
+	display: none;
+	@media (max-width: 585px) {
+		left: 20px;
+		width: 300px;
+	}
+	input {
+		width: 90%;
+		display: block;
+		outline: none;
+		border: 0;
+		padding: 0.5rem 0.2rem;
+		border-radius: 20px;
+		font-size: 1.2rem;
+	}
+	.submitInput {
+		background-color: #bbea70;
+		font-size: 1.1rem;
+		padding: 0.4em 0.6em;
+		border: 0;
+		margin-top: 1rem;
+		border-radius: 0.4rem;
+		cursor: pointer;
+	}
+}
+
+.visible {
+	display: block;
+	transform: translateY(25%);
+	transition: 0.3s ease-in-out;
+}

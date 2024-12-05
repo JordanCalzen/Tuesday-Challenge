@@ -4,6 +4,15 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
 	gap: 1rem;
+	.add-category-btn {
+		background-color: #bbea70;
+		font-size: 1.1rem;
+		padding: 0.4em 0.6em;
+		border: 0;
+		margin-top: 1rem;
+		border-radius: 0.4rem;
+		cursor: pointer;
+	}
 	.product {
 		// width: 8rem;
 		height: 5rem;
