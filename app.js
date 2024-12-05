@@ -76,11 +76,15 @@ sales.forEach((item) => {
 			</div>
     `;
 	ourSales.appendChild(product);
-	console.log(ourSales);
 });
 
 //add eventListener on the addCartegoryBtn
 
 addCategoryBtn.addEventListener("click", () => {
 	formInput.classList.toggle("visible");
+});
+//function to remove default behaviour of submit btn
+
+submitPdt.addEventListener("submit", (e) => {
+	e.preventDefault;
 });
