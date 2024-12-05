@@ -6,13 +6,17 @@
 	padding: 1rem;
 	color: white;
 	border-radius: 0.8rem;
-	flex-wrap: nowrap;
 	width: 100%;
 	.right {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
+		& p {
+			@media (max-width: 885px) {
+				display: none;
+			}
+		}
 
 		.round {
 			--size: 2rem;
@@ -51,6 +55,9 @@
 		}
 		.profile {
 			background-color: burlywood;
+			@media (max-width: 480px) {
+				display: none;
+			}
 		}
 	}
 	.left {
@@ -61,15 +68,37 @@
 		& a {
 			text-decoration: none;
 			color: white;
+			@media (max-width: 480px) {
+				display: none;
+			}
 		}
 		& i {
 			color: white;
 		}
-		input {
+	}
+	.input {
+		background: white;
+		width: 40%;
+		border-radius: 0.9rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 0.6rem;
+		@media (max-width: 480px) {
 			width: 60%;
+		}
+		input {
+			width: 90%;
 			padding: 0.5rem 1rem;
 			border: 0;
-			border-radius: 0.9rem;
+			background: 0;
+		}
+		:focus {
+			outline: none;
+		}
+		span {
+			font-size: 1rem;
+			color: black;
 		}
 	}
 }
