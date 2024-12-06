@@ -1,5 +1,10 @@
 .hero {
-	background: url(../imgs/original-88d3b0d145123af185bebfec32b34507__1_-removebg-preview.png);
+	background: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.575),
+			rgba(0, 0, 0, 0.486)
+		),
+		url(../imgs/original-88d3b0d145123af185bebfec32b34507__1_-removebg-preview.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
