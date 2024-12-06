@@ -1,6 +1,6 @@
 const ourSales = document.querySelector(".salespdts");
 
-const formInput = document.querySelector("form");
+const form = document.querySelector("form");
 
 const inputPdtName = document.querySelector("#productName");
 
@@ -81,10 +81,32 @@ sales.forEach((item) => {
 //add eventListener on the addCartegoryBtn
 
 addCategoryBtn.addEventListener("click", () => {
-	formInput.classList.toggle("visible");
+	form.classList.toggle("visible");
 });
 //function to remove default behaviour of submit btn
 
-submitPdt.addEventListener("submit", (e) => {
-	e.preventDefault;
+const formArray = JSON.parse(localStorage.getItem("formInputs")) || [];
+form.addEventListener("submit", (e) => {
+	e.preventDefault();
+	const pdtN = inputPdtName.value;
+	console.log(pdtN);
+	const imageUrl = productImg.value;
+	console.log(imageUrl);
+
+	const formInputs = {
+		title: pdtN,
+		image: imageUrl,
+	};
+
+	formArray.push(formInputs);
+	console.log(formArray);
+	localStorage.setItem("formInputs", JSON.stringify(formArray));
 });
+
+/* <div class="product">
+	<h5>${.title}</h5>
+	<p>Local market</p>
+	<div class="centerimg">
+		<img src="./imgs/carrot-removebg-preview.png" width="30" height="30" />
+	</div>
+</div>; */

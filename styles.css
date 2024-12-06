@@ -16,6 +16,10 @@ main {
   position: relative;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   background-color: #064c4f;
   display: flex;
