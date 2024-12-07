@@ -176,6 +176,7 @@ html {
   align-items: center;
   justify-content: start;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 .categories .product {
   width: 8rem;
