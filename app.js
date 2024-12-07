@@ -10,6 +10,8 @@ const submitPdt = document.querySelector(".submitInput");
 
 const addCategoryBtn = document.querySelector(".add-category-btn");
 
+const categories = document.querySelector(".categories");
+
 const sales = [
 	{
 		id: 1,
@@ -85,28 +87,72 @@ addCategoryBtn.addEventListener("click", () => {
 });
 //function to remove default behaviour of submit btn
 
-const formArray = JSON.parse(localStorage.getItem("formInputs")) || [];
-form.addEventListener("submit", (e) => {
-	e.preventDefault();
-	const pdtN = inputPdtName.value;
-	console.log(pdtN);
-	const imageUrl = productImg.value;
-	console.log(imageUrl);
+const pdtN = inputPdtName.value;
 
+const imageUrl = productImg.value;
+
+const formInputs = {
+	title: pdtN,
+	image: imageUrl,
+};
+
+let formArray = JSON.parse(localStorage.getItem("formInputs")) || [];
+renderUi();
+
+submitPdt.addEventListener("click", (e) => {
+	e.preventDefault();
+
+	// Capture user inputs
+	const pdtN = inputPdtName.value.trim();
+	const imageUrl = productImg.value.trim();
+
+	if (!pdtN || !imageUrl) {
+		alert("Please fill in all fields.");
+		return;
+	}
+
+	// Create a new product object
 	const formInputs = {
 		title: pdtN,
 		image: imageUrl,
 	};
 
+	// Add the new product to the array
 	formArray.push(formInputs);
-	console.log(formArray);
+
+	// Save the updated array to localStorage
 	localStorage.setItem("formInputs", JSON.stringify(formArray));
+
+	// Render the updated UI
+	renderUi();
+
+	// Clear inputs and hide the form
+	inputPdtName.value = "";
+	productImg.value = "";
+	form.classList.remove("visible");
 });
 
-/* <div class="product">
-	<h5>${.title}</h5>
-	<p>Local market</p>
-	<div class="centerimg">
-		<img src="./imgs/carrot-removebg-preview.png" width="30" height="30" />
-	</div>
-</div>; */
+function renderUi() {
+	// Clear existing UI to prevent duplicates
+	categories.innerHTML = "";
+
+	// Loop through formArray and render each product
+	formArray.forEach((item) => {
+		const received = document.createElement("div");
+		received.classList.add("recv");
+		received.innerHTML = `
+		  <div class="product">
+			<img src="${item.image}" alt="${item.title}" />
+			<h5>${item.title}</h5>
+			<p>Local market</p>
+		  </div>
+	  `;
+		categories.appendChild(received);
+	});
+}
+
+// Initial render when the page loads
+window.addEventListener("DOMContentLoaded", () => {
+	formArray = JSON.parse(localStorage.getItem("formInputs")) || [];
+	renderUi();
+});

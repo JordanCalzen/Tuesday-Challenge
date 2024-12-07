@@ -21,7 +21,6 @@ html {
 }
 
 .header {
-  background-color: #002124;
   background: linear-gradient(to right, #001f21, #002528);
   display: flex;
   align-items: center;
@@ -157,28 +156,44 @@ html {
   border-radius: 0.4rem;
 }
 
-.categories {
+.category {
   width: 100%;
   padding: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-  gap: 1rem;
 }
-.categories .add-category-btn {
+.category .add-category-btn {
   background-color: #bbea70;
   font-size: 1.1rem;
   padding: 0.4em 0.6em;
   border: 0;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   border-radius: 0.4rem;
   cursor: pointer;
 }
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
 .categories .product {
-  height: 5rem;
-  background-color: white;
+  width: 8rem;
+  height: 8rem;
+  background-color: #dceeee;
   border-radius: 0.8rem;
   padding: 0.5rem;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.categories .product img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .categories .product p {
   font-size: 0.8rem;
