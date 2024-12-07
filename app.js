@@ -142,9 +142,10 @@ function renderUi() {
 		received.classList.add("recv");
 		received.innerHTML = `
 		  <div class="product">
-			<img src="${item.image}" alt="${item.title}" />
+			<img src="${item.image}" width="50" height="50" />
 			<h5>${item.title}</h5>
 			<p>Local market</p>
+			
 		  </div>
 	  `;
 		categories.appendChild(received);
