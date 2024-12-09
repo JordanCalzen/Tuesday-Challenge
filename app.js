@@ -15,50 +15,50 @@ const categories = document.querySelector(".categories");
 const sales = [
 	{
 		id: 1,
-		pdtName: "Vegetables",
-		image: "./imgs/carrot-removebg-preview.png",
+		pdtName: "Apples",
+		image: "./imgs/apple-429213_640.jpg",
 		price: 20,
 	},
 	{
 		id: 2,
-		pdtName: "Chicken",
-		image: "./imgs/carrot-removebg-preview.png",
+		pdtName: "Carrot",
+		image: "./imgs/carrot-3929743_640.jpg",
 		price: 30,
 	},
 	{
 		id: 3,
-		pdtName: "Milk",
-		image: "./imgs/carrot-removebg-preview.png",
+		pdtName: "Cabbag",
+		image: "./imgs/cabbage-5337431_640.jpg",
 		price: 25,
 	},
 	{
 		id: 4,
-		pdtName: "Snacks",
-		image: "./imgs/carrot-removebg-preview.png",
+		pdtName: "Banana",
+		image: "./imgs/vegetables-5907357_640.jpg",
 		price: 15,
 	},
 	{
 		id: 5,
-		pdtName: "Snacks",
-		image: "./imgs/carrot-removebg-preview.png",
+		pdtName: "Orange",
+		image: "./imgs/mandarin-oranges-6929463_640.jpg",
 		price: 15,
 	},
 	{
 		id: 6,
-		pdtName: "Snacks",
-		image: "./imgs/carrot-removebg-preview.png",
+		pdtName: "Berrie",
+		image: "./imgs/whipped-cream-4951994_640.jpg",
 		price: 15,
 	},
 	{
 		id: 7,
-		pdtName: "Snacks",
-		image: "./imgs/carrot-removebg-preview.png",
+		pdtName: "Grapes",
+		image: "./imgs/vegetables-5066738_640.jpg",
 		price: 15,
 	},
 	{
 		id: 8,
-		pdtName: "Snacks",
-		image: "./imgs/carrot-removebg-preview.png",
+		pdtName: "Fruits",
+		image: "./imgs/fruits-5831946_640.jpg",
 		price: 15,
 	},
 ];
@@ -66,15 +66,19 @@ const sales = [
 sales.forEach((item) => {
 	const product = document.createElement("div");
 	product.classList.add("prodct");
+	product.innerHTML = "";
 	product.innerHTML = `
         
 			<div class="pdt">
-					<img src="${item.image}" width="30"
-						height="30" alt="" />
+					<img src="${item.image}" alt="" />
 					<h3>${item.pdtName}<span>(Local Shop)</span></h3>
 					<p>500gm</p>
 					<h1>${item.price}.<sup>29$</sup></h1>
-					<button class="add-to-cart">+</button>
+                <div class="centerBtn">
+					<button class="add-to-cart">
+                      <img src="./imgs/cart.webp" alt=""><span>Add to cart</span>
+					</button>
+				</div>
 			</div>
     `;
 	ourSales.appendChild(product);
